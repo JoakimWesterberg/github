@@ -22,10 +22,17 @@ dateDownloaded
 
 ## Downloading xls-file from internet
 fileUrl <- "https://data.baltimorecity.gov/api/views/dz54-2aru/rows.xls?accessType=DOWNLOAD"
-download.file(fileUrl, destfile = "./data/cameras.xls", method = "auto")
+download.file(fileUrl, destfile = "./data/cameras.xlsx", method = "auto", mode = "wb")
 list.files(".data")
 dateDownloaded <- date()
 dateDownloaded
+
+## installing packages to read from xls
+install.packages("xlsx")
+library(xlsx)
+
+## read xls-file
+cameraData <- read.xlsx("./data/cameras.xlsx", sheetIndex = 1, header = TRUE)
 
 
 ## use read.table() to read from "flat" file, most common function to read file

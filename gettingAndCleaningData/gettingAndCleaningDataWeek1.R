@@ -22,6 +22,8 @@ cameraData <- read.table("./data/cameras.csv", sep = ",", header = TRUE)
 head(cameraData)
 
 
+
+
 ## installing data.table package
 install.packages("data.table")
 

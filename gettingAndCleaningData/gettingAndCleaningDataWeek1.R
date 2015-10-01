@@ -3,7 +3,6 @@
 ## git commit -a -m "kommentarer här"
 ## git push origin master (för att få upp skiten på nätet)
 
-
 ## setting the working directory
 setwd("C:\\Users\\erajweg\\Documents\\github\\gettingAndCleaningData")
 
@@ -20,6 +19,14 @@ list.files(".data")
 ## setting the date the data was downloaded, to keep track
 dateDownloaded <- date()
 dateDownloaded
+
+## Downloading xls-file from internet
+fileUrl <- "https://data.baltimorecity.gov/api/views/dz54-2aru/rows.xls?accessType=DOWNLOAD"
+download.file(fileUrl, destfile = "./data/cameras.xls", method = "auto")
+list.files(".data")
+dateDownloaded <- date()
+dateDownloaded
+
 
 ## use read.table() to read from "flat" file, most common function to read file
 ## a bit slow though, and use RAM

@@ -1,3 +1,9 @@
+## Några git-kommandon
+## git status, ger status
+## git commit -a -m "kommentarer här"
+## git push origin master (för att få upp skiten på nätet)
+
+
 ## setting the working directory
 setwd("C:\\Users\\erajweg\\Documents\\github\\gettingAndCleaningData")
 
